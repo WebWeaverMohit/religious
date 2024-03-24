@@ -1,0 +1,426 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    overflow-x: hidden;
+}
+
+#cursor{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 0%;
+    z-index: 9;
+    left: 0%;
+    transition: all linear 0.05s;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+}
+
+#nav{
+    width: 100%;
+    height: 70px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    color: white;
+    position: fixed;
+    z-index: 9;
+}
+
+#nav #part1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav #part1 h2{
+    font-weight: 549;
+}
+
+#nav #part1 img{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#nav #part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+#nav #part2 a{
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+}
+
+#main #page1{
+    height: 100vh;
+    width: 100vw;
+    padding: 0.1px;
+    overflow-x: hidden;
+    position: relative;
+    background-image: url(https://images.unsplash.com/photo-1514930228629-e8a7034abd17?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1812&q=80);
+    background-size: cover;
+    background-position: top 70%;
+}
+
+#page1>h3{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    font-weight: 900;
+    transform: translate(-50%, -50%);
+    font-size: 62px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    
+    letter-spacing: 2px;
+    /* -webkit-text-stroke-width: 2px;
+    -webkit-text-fill-color: transparent; */
+}
+
+#page1>h3 span{
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-fill-color: transparent;
+}
+
+#center{
+    height: 333px;
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1647866873870-92d45763ef44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80);
+   background-position: center;
+    background-size: cover;
+    white-space: nowrap;
+    position: relative;
+    overflow-x: scroll;
+    display: flex;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    background-color: transparent;
+    justify-content: center;
+    display: flex;
+    white-space: nowrap;
+    padding: 0 20px;
+    animation-name: move;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.container .elem{
+    height: 85%;
+    width: 250px;
+    margin-right: 20px;
+    border: 2px solid #fff;
+    background-color: cyan;
+}
+
+#center .container:nth-last-child(1) .elem{
+    background-color: black;
+}
+
+#center .container:nth-last-child(1){
+    margin-left: -38px;
+    padding-right: 0;
+}
+
+#center::-webkit-scrollbar{
+    display: none;
+}
+
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@keyframes move {
+    0%{
+        transform: translateX(0%);
+    }
+    50%{
+        transform: translateX(calc(-100% + 42px));
+    }
+    100%{
+        transform: translateX(calc(0%));
+    }
+}
+
+#page2{
+    padding: 80px 50px;
+    background: linear-gradient(90deg,black,rgb(119, 3, 3),black);
+    height: 45vh;
+    width: 100%;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+#page2 h1{
+    font-size: 50px;
+    font-family: PP Woodland;
+    margin-bottom: 15px;
+    border-bottom: 1px solid white;
+    width: 60%;
+    margin-left: 20%;
+}
+
+#page2 h3{
+    font-weight: 500;
+    font-size: 25px;
+}
+
+#page3{
+    padding: 0.1px;
+    height: 140vh;
+    margin-top: -5px;
+    background: linear-gradient(90deg, black, rgb(119, 3, 3), black);
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    position: relative;
+}
+
+#page3 h1{
+    font-size: 40px;
+    margin-top: 30px;
+    font-weight: 300;
+    font-family: PP Woodland;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#page3 p{
+    font-size: 15px;
+    margin-bottom: 70px;
+}
+
+.page3-container{
+    height: 38%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    margin-bottom: 50px;
+    width: 100%;
+    gap: 50px;
+    /* background-color: red; */
+}
+
+.page3-container .alex{
+    height: 100%;
+    width: 300px;
+    transition: all ease 0.5s;
+    background-color:rgb(250, 250, 250);
+}
+
+.alex-img{
+    height: 200px;
+    width: 300px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.alex-img img{
+    height: 100%;
+    width: 100%;
+    transition: all ease 0.5s;
+    object-fit: cover;
+    object-position: center;
+}
+
+.alex:hover img{
+    scale: 1.1;
+}
+
+.alex:hover{
+    scale: 0.95;
+}
+
+.alex h2{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.alex h4{
+    width: 80%;
+    margin-left: 10%;
+    font-family: serif;
+    font-size: 20px;
+}
+
+#page4{
+    height: 110vh;
+    width: 100%;
+    padding: 0.1px;
+    position: relative;
+    margin-top: -2px;
+    color: #fff;
+    background: linear-gradient(90deg, black, rgb(119, 3,3), black);
+}
+
+#page4 h2{
+    font-size: 30px;
+    font-weight: 500;
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px
+}
+
+.page4-img{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+    /* background-color: yellow; */
+    height: 30%;
+    gap: 50px;
+    width: 100%;
+}
+
+.page4-img img{
+    height: 85%;
+    width: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.page4-img:nth-child(3){
+    margin-top: -30px;
+}
+
+#page4-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 0 90px;
+}
+
+#page4-text h3{
+    font-family: PPP Woodland;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+#page4-text h4{
+    font-size: 25px;
+    font-family: serif;
+    width: 70%;
+    margin-left: 15%;
+}
+
+#page5{
+    padding: 0 80px;
+    height: 40vh;
+    width: 100vw;
+    position: relative;
+    background: linear-gradient(90deg, black, rgb(119, 2, 2), black);
+    display: flex;
+    align-items: center;
+    margin-top: -2px;
+    justify-content: space-between;
+}
+
+#page5 #left{
+    width: 55%;
+    color: #fff;
+    text-align: center;
+}
+
+#page5 #left h2{
+    font-family: PP Woodland;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+#page5 #left h4{
+    font-size: 20px;
+    font-family: serif;
+}
+
+#page5>i{
+    font-size: 50px;
+    padding: 50px;
+    color: white;
+    border-radius: 50%;
+    margin-right: 10%;
+}
+
+#page6{
+    height: 30vh;
+    width: 100vw;
+    padding: 50px 80px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background-color: #fff;
+    color: #000;
+    overflow: hidden;
+}
+
+#page6 h2{
+    font-family: PP Woddland;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+#page6 h4{
+    font-family: PP Mori;
+    font-weight: 200;
+    font-size: 17px;
+}
+
+#page6 #right{
+    text-align: left;
+    display:grid;
+    border-left: 1px solid grey;
+    height: 150%;
+    padding-left: 80px;
+}
+
+#page6 #right a{
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: -15px;
+    font-family: PP Mori;
+    color: #000;
+}
+
+#page6 #right a:nth-child(1){
+    margin-top: 20px;
+}

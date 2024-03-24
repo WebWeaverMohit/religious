@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="style.css">
+    <title>HACHATHON</title>
+</head>
+<body>
+    <div id="cursor"></div>
+    <div id="main">
+        <div id="page1">
+            <div id="nav">
+                <div id="part1">
+                    <img src="data:image/jpeg;base64,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" alt="">
+                    <h2>Cultural Haven</h2>
+                </div>
+                <div id="part2">
+                    <a href="http://127.0.0.1:5500/login.html">Login/Sign-in</a>
+                    <a href="">Festive Calender</a>
+                    <a href="http://127.0.0.1:5500/around.html">Around You</a>
+                    <a href="">Interact</a>
+                    <a href="">About Us</a>
+                </div>
+            </div>
+            <h3>WELCOME TO <span>CULTURAL HAVEN</span></h3>
+        </div>
+        <div id="center">
+                <div class="container">
+                    <div class="elem">
+                        <img src="https://images.unsplash.com/photo-1641792112158-0aaa3d75da32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2Fua3JhbnRpfGVufDB8MXwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                    </div>
+                    <div class="elem">
+                        <img src="https://images.unsplash.com/photo-1615438890269-65b569062819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fE1haGFzaGl2cmF0cml8ZW58MHwxfDB8fHww&auto=format&fit=crop&w=500&q=60" alt="">
+                    </div>
+                    <div class="elem">
+                        <img src="https://media.istockphoto.com/id/466572662/photo/holy-indian-god-shri-ram-statue.jpg?s=612x612&w=0&k=20&c=bog0piljXQtnEiIBGY5VwcgG_2XEOy5xE_EeZ2IRB_o=" alt="">
+                    </div>
+                    <div class="elem">
+                        <img src="https://images.unsplash.com/photo-1617173315663-a6f63e72634e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aG9saXxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                    </div>
+                    <div class="elem">
+                        <img src="https://images.unsplash.com/photo-1601745407404-1f91f0fa52b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aWVkfGVufDB8MXwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                    </div>
+                    <div class="elem">
+                        <img src="https://images.unsplash.com/photo-1659907521212-8bbdfa688aa6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmFrc2hhJTIwYmFuZGhhbnxlbnwwfDF8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="elem">
+                        <img src="https://images.unsplash.com/photo-1631691003610-ba2c96433bb2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGphbm1hc2h0YW1pfGVufDB8MXwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                    </div>
+                    <div class="elem">
+                        <img src="https://images.unsplash.com/photo-1622044720920-aa1765800f50?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z2FuZXNoJTIwY2hhdHVydGhpfGVufDB8MXwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                    </div>
+                    <div class="elem">
+                        <img src="https://images.unsplash.com/photo-1634015158905-de840be0c62c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHVyZ2ElMjBwdWphfGVufDB8MXwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                    </div>
+                    <div class="elem">
+                        <img src="https://media.istockphoto.com/id/1421506544/vector/happy-dussehra-lettering-with-lord-rama-taking-an-aim-on-purple-silhouette-demon-ravana.jpg?s=612x612&w=0&k=20&c=QFZlHjPm0Wi2-QcDQmJ0dwIIky590oFvVqb2yqn25ew=" alt="">
+                    </div>
+                    <div class="elem">
+                        <img src="https://images.unsplash.com/photo-1572731128205-2f901976a42b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGl3YWxpfGVufDB8MXwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                    </div>
+                    <div class="elem">
+                        <img src="https://images.unsplash.com/photo-1543589077-47d81606c1bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hyaXN0bWFzfGVufDB8MXwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                    </div>
+                </div>
+        </div>
+        <div id="page2">
+            <h1>Diversity Of India</h1>
+            <h3>Get ready to dive into the vibrant colors, Flavours and excitement of India's rich cultural heritage</h3>
+        </div>
+        <div id="page3">
+            <h1>Festive Calendar</h1>
+            <p>Get to know about your Religion and it's Culture</p>
+            <div class="page3-container">
+                <div class="alex">
+                    <div class="alex-img">
+                        <img src="https://i0.wp.com/destinosahora.com/wp-content/uploads/2020/01/holifestival.jpg?fit=1920%2C1080&ssl=1" alt="">
+                    </div>
+                        <h2>Holi</h2>
+                        <h4>The Festival of Colors bringing joy amd happiness</h4>
+                </div>
+                <div class="alex">
+                    <div class="alex-img">
+                        <img src="https://images.news18.com/ibnlive/uploads/2020/11/1605074723_diwali.jpg" alt="">
+                    </div>
+                        <h2>DIWALI</h2>
+                        <h4>The festival of lights, illuminating every corner of the country</h4>
+                </div>
+                <div class="alex">
+                    <div class="alex-img">
+                        <img src="https://blogs.indiatailormade.com/wp-content/uploads/2018/10/jskchh1.jpg" alt="">
+                    </div>
+                        <h2>EID</h2>
+                        <h4>A celebration of unity, reflection, and sumptuous feasts</h4>
+                </div>
+                <div class="alex">
+                    <div class="alex-img">
+                        <img src="https://astrotalk.com/astrology-blog/wp-content/uploads/2023/07/Sawan-Shivratri-2023.jpg" alt="">
+                    </div>
+                        <h2>MAHASHIVRATRI</h2>
+                        <h4>Maha Shivaratri: Hindu festival honoring Lord Shiva with fasting and prayer.</h4>
+                </div>
+            </div>
+            <div class="page3-container">
+                <div class="alex">
+                    <div class="alex-img">
+                        <img src="https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20190829152034/Ganapati-Visarjan-Immersion-at-Mumbai.jpg" alt="">
+                    </div>
+                        <h2>GANESH CHATURTHI</h2>
+                        <h4>Ganesh Chaturthi: Hindu festival honoring Lord Ganesha's birth with rituals and idol installations</h4>
+                </div>
+                <div class="alex">
+                    <div class="alex-img">
+                        <img src="https://www.thestatesman.com/wp-content/uploads/2020/10/QT-Durga-Pujo.jpg" alt="">
+                    </div>
+                        <h2>DURGA POOJA</h2>
+                        <h4>A vibrant tribute to the goddess of power</h4>
+                </div>
+                <div class="alex">
+                    <div class="alex-img">
+                        <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/k-144-chim-000575_1.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=f9e74872991d231c6328dd15d3c96bf1" alt="">
+                    </div>
+                        <h2>CHRISTMAS</h2>
+                        <h4>A season filled with festive joy and kindness</h4>
+                </div>
+            </div>    
+        </div>
+        <div id="page4">
+            <h2>Embrace the magic of India's culture, where every moment is a fusion of vibrant hues, tantalizing tastes, and electrifying excitement also magnify your knowledge!</h2>
+            <div class="page4-img">
+                <img src="https://media.istockphoto.com/id/838927480/photo/onam-sadya-on-a-banana-leaf.jpg?s=2048x2048&w=is&k=20&c=FqF5ghlR-ElQPnaL0rHrQCFW0aN9ItFs34qWM7utIXY=" alt="">
+                <img src="https://th.bing.com/th/id/OIP.CZokGuQNIg1xFIzNaYWJZQHaE8?w=288&h=192&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="">
+                <img src="https://th.bing.com/th/id/OIP.DPR5R6BLN9SkkIZSfHoa5wHaE3?w=247&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="">
+                <img src="https://images.unsplash.com/photo-1463592177119-bab2a00f3ccb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRyYWRpdGlvbmFsJTIwZGFuY2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="">
+            </div>
+            <div class="page4-img">
+                <img src="https://media.istockphoto.com/id/1054227912/photo/diwali-rangoli-or-design-made-using-indian-snacks-sweet-and-diya-or-lamp-and-flowers.webp?b=1&s=170667a&w=0&k=20&c=YfbzkWPlgo4JCIspNrXT1Q1Vv67nYeQ6gy3r8Crr0nY=" alt="">
+                <img src="https://media.istockphoto.com/id/1398970739/photo/beautiful-brunette-woman-in-red-sari-eating-with-appetite-traditional-thali-wirh-rise-curd.jpg?s=612x612&w=0&k=20&c=KiOd04SLHgjWgjWPZFBcMldnYK0L93jFRS734kXMJFM=" alt="">
+                <img src="https://media.istockphoto.com/id/622917288/photo/thai-classical-mask-dance-of-the-ramayana-epic.jpg?s=612x612&w=0&k=20&c=qirGX-X7BZ0NsoVaQq9i0z4tOuxTh7YTWOisu1SqjRM=" alt="">
+                <img src="https://media.istockphoto.com/id/1454319716/photo/3d-render-of-punjabi-young-couple-doing-bhangra-dance-and-lohri-festival-element-on-black.jpg?s=612x612&w=0&k=20&c=BGRSTbdnOO46uYdPkqUsLX_ZOyWzHfbZtPH1hOmKJVU=" alt="">
+            </div>
+            <div id="page4-text">
+                <div id="left">
+                    <h3>Incredible Flavours</h3>
+                    <h4>Taste the mouthwatering delicates from every corner of India. </h4>
+                </div>
+                <div id="right">
+                    <h3>Spectular Dances</h3>
+                    <h4>Witness the breathtaking performances and vibrant traditions.</h4>
+                </div>
+            </div>
+        </div>
+        <div id="page5">
+            <div id="left">
+                <h2>Featuring Culture And Heritage</h2>
+                <h4>Discover the hidden gems of lacal festivals and events happened right around your corner. Relish every moment by being a part of cultural and estatic celebrations.</h4>
+            </div>
+            <i id="loc" class="ri-map-pin-fill"></i>
+        </div>
+        <div id="page6">
+            <div id="left"> 
+                <h2>Get involved and know about your Culture and Heritage</h2>
+            <h4>Become a part of our festival community and never miss out on any spirited occasion. Connect, Share and Create unforgettable memories.</h4>
+            </div>
+            <div id="right">
+                <a href="/">Home</a>
+                <a href="">Login/Sign-In</a>
+                <a href="">Festive Calendar</a>
+                <a href="">Around You</a>
+                <a href="">Interact</a>
+                <a href="">About Us</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>

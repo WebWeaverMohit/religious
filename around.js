@@ -1,0 +1,31 @@
+document.querySelector("#submit").addEventListener("click",function(){
+    var tl2 = gsap.timeline()
+    tl2.to("#l1",{
+        scale:1,
+        opacity:1,
+    })
+    tl2.to("#l2",{
+        scale:1,
+        opacity:1,
+    })
+    tl2.to("#l3",{
+        scale:1,
+        opacity:1,
+    })
+    tl2.to("#l4",{
+        scale:1,
+        opacity:1,
+    })
+    tl2.to("#l5",{
+        scale:1,
+        opacity:1,
+    })
+    tl2.to("#l6",{
+        scale:1,
+        opacity:1,
+    })
+    tl2.to("#l7",{
+        scale:1,
+        opacity:1,
+    })
+})
